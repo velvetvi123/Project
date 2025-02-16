@@ -2,7 +2,7 @@ import React from 'react';
 import { Github, ExternalLink } from 'lucide-react';
 
 interface ProjectCardProps {
-  title: string;
+  title: React.ReactNode; // Accepts JSX instead of just string
   description: string;
   tags: string[];
   githubUrl: string;

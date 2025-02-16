@@ -16,12 +16,15 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
   location,
   description,
 }) => (
-  <div className="mb-12 flex gap-8 group">
-    <div className="flex flex-col items-center">
+  <div className="relative mb-12 flex gap-8 group">
+    <div className="absolute top-0 left-4 w-0.5 h-full bg-gradient-to-b from-blue-500 to-purple-500/20"></div>
+    <div className="absolute top-1/2 left-0 transform -translate-y-1/2">
       <div className="w-4 h-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full group-hover:scale-125 transition-transform duration-300"></div>
+    </div>
+    <div className="flex flex-col items-center">
       <div className="w-0.5 h-full bg-gradient-to-b from-blue-500/50 to-purple-500/20"></div>
     </div>
-    <div className="flex-1 glass-effect rounded-2xl p-8 transform transition-all duration-300 hover:scale-[1.02] slide-in">
+    <div className="relative flex-1 bg-white/25 rounded-2xl p-8 transform transition-all duration-300 hover:scale-[1.02] slide-in">
       <div className="flex items-center gap-3 text-sm text-gray-500 mb-2">
         <Calendar size={16} className="text-blue-500" />
         <span className="font-medium">{date}</span>
@@ -47,36 +50,40 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
 export const Timeline: React.FC = () => {
   const experiences = [
     {
-      date: "2021 - Present",
+      date: "2024 - 2025",
       title: "Software Engineer",
-      company: "Tech Solutions Inc.",
-      location: "San Francisco, CA",
+      company: "Blackswan Technology.",
+      location: "Casablanca, Morocco",
       description: [
-        "Led a team of 5 developers in building a microservices architecture",
-        "Improved application performance by 40% through optimization",
-        "Implemented CI/CD pipelines reducing deployment time by 60%"
+        "Developed scalable, high-performance applications",
+        "Integrated and adapted systems with Odoo and HubSpot for seamless workflows",
+        "Implemented CI/CD pipelines reducing deployment time by 60%",
+        "Focused on innovation and adaptability to drive growth and performance."
       ]
     },
     {
-      date: "2019 - 2021",
+      date: "2023 - 2024",
       title: "Software Engineer",
-      company: "Innovation Labs",
-      location: "New York, NY",
+      company: "ALX AFRICA",
+      location: "Casablanca, Hybrid",
       description: [
-        "Developed and maintained multiple React-based web applications",
+        "Developed and maintained multiple web applications",
         "Collaborated with UX team to implement responsive designs",
         "Mentored junior developers and conducted code reviews"
       ]
     },
     {
-      date: "2017 - 2019",
-      title: "Junior Developer",
-      company: "StartUp Co",
-      location: "Boston, MA",
+      date: "2022 - 2023",
+      title: "Automation Engineer",
+      company: "Ceriab",
+      location: "El-jadida-Casablanca, Morocco",
       description: [
-        "Built and maintained RESTful APIs using Node.js",
-        "Implemented user authentication and authorization",
-        "Contributed to the development of company's main product"
+        "Designed and developed an intelligent Industry 4.0 system",
+        "Programmed an intelligent board (Arduino) integrated with an ESP8266 Wi-Fi module using C++",
+        "Built a real-time data visualization website to monitor and display system performance",
+        "Delivered innovative, IoT-based solutions to enhance automation and efficiency"
+
+        
       ]
     }
   ];
